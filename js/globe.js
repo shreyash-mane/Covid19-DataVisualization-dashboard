@@ -50,7 +50,6 @@ document.getElementById("aboutBtn").onclick = () => {
 };
 
 Promise.all([
-  //d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json"),
   d3.json("https://raw.githubusercontent.com/JeeveshJoshi/Resources/refs/heads/main/countries.json"),
   d3.csv('https://raw.githubusercontent.com/JeeveshJoshi/Resources/refs/heads/main/Cleared_covid_data_final.csv')
 ]).then(([worldData, data]) => {
@@ -72,17 +71,6 @@ Promise.all([
     }
   }
 
-  
-
-  // data.forEach(d => {
-  //   if (d.date === "2022-01-01") {
-  //     casesByISO[d.iso_code] = {
-  //       total_cases: +d.total_cases || 0,
-  //       location: d.location
-  //     };
-  //   }
-  // }
-
 );
 
 const colorScale = d3.scaleSequential(d3.interpolateReds)
@@ -98,21 +86,18 @@ const colorScale = d3.scaleSequential(d3.interpolateReds)
     .join("path")
     .attr("class", "country")
     .attr("fill", d => {
-      //const data = casesByISO[d.id];
       const nameKey = d.properties.name.trim().toLowerCase();
       const countryData = countryDataMap[nameKey];
       if (countryData && !isNaN(countryData.total_cases)) {
         return colorScale(Math.log10(countryData.total_cases));
       } else {
-        return "#999"; // Gray color for missing or invalid data
+        return "#999"; 
       }
-      //return data && data.total_cases ? CHART_CONSTANTS.colorScale(Math.log1p(data.total_cases)) : "#333";
     })
     .attr("stroke", "#111")
     .attr("d", CHART_CONSTANTS.path)
     .on("mouseover", (event, d) => {
       if (!isFrozen) {
-        //const data = casesByISO[d.id];
         const nameKey = d.properties.name.trim().toLowerCase();
         const countryData = countryDataMap[nameKey];
         tooltip.style("display", "block").html(`
@@ -148,7 +133,6 @@ const colorScale = d3.scaleSequential(d3.interpolateReds)
         };
       });
 
-      //const data = casesByISO[d.id];
       const nameKey = d.properties.name.trim().toLowerCase();
       const countryData = countryDataMap[nameKey];
 
