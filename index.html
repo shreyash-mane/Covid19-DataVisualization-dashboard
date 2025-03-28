@@ -1,17 +1,86 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <!-- This meta tag sets character encoding for the document -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <!-- The title element defines the title of the document --> 
-        <title>Covid Data Analysis</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>COVID-19 Dashboard</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://unpkg.com/topojson@3"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-        <!-- This meta tag holds the name of the document author -->
-        <meta name="author" content="Jeevesh Joshi">
-    </head>
-    <body>
-        <script src="https://d3js.org/d3.v7.min.js"></script>
-    </body>
+  <div id="header">
+    <h1>
+      <img src="https://cdn-icons-png.flaticon.com/512/2936/2936639.png" alt="virus icon">
+      COVID-19 Dashboard
+    </h1>
+    <h2> The Pandemic That Changed the World: Explore COVID-19 Like Never Before!</h2>
+    <button id="aboutBtn">About Us</button>
+  </div>
+
+  <div id="aboutBox">
+    <strong>Team Member:</strong> Snehal Deore<br>
+    <strong>Team Member:</strong> Jeevesh Joshi<br>
+    <strong>Team Member:</strong> Annish Baskar<br>
+    <strong>Team Member:</strong> Shreyash Mane<br>
+    <strong>Project:</strong> Interactive COVID-19 Data Visualization Dashboard
+  </div>
+
+  <svg id="globe" width="960" height="600"></svg>
+  <div id="tooltip"></div>
+
+  <div id="infoBox_globe">
+    <div id="infoContent"></div>
+    <button id="viewMoreBtn">View Stringency vs Cases</button>
+  </div>
+
+  
+
+  <!-- Line Chart Container -->
+  <div id="lineChartContainer" style="display:none;">
+    <h2 id="lineChartTitle"></h2>
+    <svg id="lineChart" width="1200" height="500"></svg>
+    <div id="lineChartTooltip" class="chart-tooltip"></div>
+  </div>
+
+  <div id="barChartContainer" style="display:none; padding: 20px;">
+    <h2>COVID-19 Performance: Performance Comparison</h2>
+    <svg id="barChart" width="900" height="500"></svg>
+  </div>
+
+  <div id="scatterChartContainer" style="display:none; padding: 20px;">
+    <h2>Stringency vs Deaths per Million</h2>
+    <svg id="scatterChart" width="900" height="500"></svg>
+  </div>
+
+  <!-- <div style="text-align:center; margin-top: 10px;">
+    <input type="range" id="scatterSlider" style="width: 80%;" />
+    <div id="scatterDateLabel" style="color:white; font-weight: bold; margin-top: 5px;"></div>
+  </div> -->
+  
+
+  <div id="scatterSliderWrapper" style="display:none; text-align:center; margin-top: 10px;">
+    <input type="range" id="scatterSlider" style="width: 80%;" />
+    <div id="scatterDateLabel" style="color:white; font-weight: bold; margin-top: 5px;"></div>
+    <button id="scatterPlayPause" style="display: none; margin-top: 10px;">Pause</button>
+  </div>
+  <!-- <button id="scatterPlayPause" style="display: none; margin-top: 10px;">Pause</button> -->
+  
+  <button id="backBtn">Back to Globe</button>
+  <button id="insightsBtn">Further Insights</button>
+  
+  <div id="infoBox"></div> <!-- New page info box -->
+  
+
+    <script src="js/globe.js"></script>
+    <script src="js/constants.js"></script>
+    <script src="js/lineChart.js"></script>
+    <script src="js/groupedBarChart.js"></script>
+    <script src="js/scatterChart.js"></script>
+    <script src="js/infoBox.js"></script>
+
+   
+
+
+</body>
 </html>

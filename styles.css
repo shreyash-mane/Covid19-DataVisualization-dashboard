@@ -1,0 +1,190 @@
+/* styles.css */
+body {
+    margin: 0;
+    background: linear-gradient(-45deg, #081c2e, #13293d, #0b2e4a, #1e3a56);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: white;
+    font-family: sans-serif;
+  }
+  
+  @keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
+  
+  #header {
+    background: rgba(19, 41, 61, 0.9);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    position: relative;
+  }
+  
+  #header h1 {
+    margin: 0;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #header img {
+    height: 28px;
+  }
+  
+  #aboutBtn {
+    background: #ffcc00;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  #aboutBox {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    background: #1e3a56;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    display: none;
+    z-index: 10;
+  }
+  
+  #globe {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+  }
+  
+  #tooltip {
+    position: absolute;
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    padding: 8px;
+    font-size: 13px;
+    border-radius: 4px;
+    pointer-events: none;
+    display: none;
+  }
+  
+  #infoBox_globe {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    background: #1c2c38;
+    color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    max-width: 250px;
+    display: none;
+  }
+  
+
+   .info-box {
+    position: absolute;
+    top: 200px;
+    background: rgba(30, 58, 86, 0.9);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 30%;
+    max-width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+}
+
+.info-left {
+    left: 20px; /* Appears on the left for the globe page */
+}
+
+.info-right {
+    right: 20px; /* Appears on the right for graph pages */
+}
+
+/* .info-box h2 {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: bounceIn 0.8s ease-out forwards;
+}
+
+@keyframes bounceIn {
+  0% {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  50% {
+      opacity: 0.5;
+      transform: scale(1.1);
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+} */
+
+
+
+  #viewMoreBtn {
+    margin-top: 10px;
+    background: #00bcd4;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  #backBtn, #insightsBtn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    position: absolute;
+  }
+  
+  #backBtn {
+    bottom: 20px;
+    right: 20px;
+    background: #ff6961;
+    display: none;
+  }
+  
+  #insightsBtn {
+    bottom: 20px;
+    left: 20px;
+    background: #4caf50;
+  }
+  
+  .country {
+    transition: fill 0.3s ease, stroke 0.3s ease;
+  }
+  
+  .country:hover {
+    stroke: #00ffff;
+    stroke-width: 1.5px;
+    filter: drop-shadow(0 0 5px #00ffff);
+  }
+
+  .chart-tooltip {
+    position: absolute;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    pointer-events: none;
+    z-index: 9999;
+  }
