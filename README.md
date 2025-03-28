@@ -38,8 +38,13 @@ Bar Chart – Compare total cases and deaths per million for selected countries.
 Line Chart – Analyze the relationship between government restrictions and COVID-19 cases over time. Did stricter policies help reduce infections? Find out through this visualization.
 Scatter Plot – Explore the impact of lockdown policies on fatality rates. This graph helps reveal whether stricter rules actually saved more lives.
 
-
-
+How To Use : 
+The dashboard is going to run by double clicking on index.html file after that it will open our landing page with color code globe and the information box 
+where it will start their story of covod 19. 
+If we want to know the total cases for each country it is showing when we are hovering on their map. after clicking on spoecific country it will zoom in to that country 
+Further there is view more button it will render you to the line chart page where you will see the stringency vs toatal cases graph.
+If you want to go back to landing page there is back to globe button where you can click and go back to landing page . to know more about our story you have to click on further insight button which is
+on the globe page so it will take you to the slides of diffrent graph which will let us know that how covid 19 impacted.
 
 
 
