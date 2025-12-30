@@ -2,7 +2,7 @@
 This is the repository for the the Data Visualisation & Analytics course group project.
 
 
-- we have created a fork of the project under namespace.
+- We have created a fork of the project under namespace.
 Our project name : Covid 19: data driven Impact 
 Group members : Snehal Deore
                 Jeevesh Joshi 
@@ -45,6 +45,7 @@ If we want to know the total cases for each country it is showing when we are ho
 Further there is view more button it will render you to the line chart page where you will see the stringency vs toatal cases graph.
 If you want to go back to landing page there is back to globe button where you can click and go back to landing page . to know more about our story you have to click on further insight button which is
 on the globe page so it will take you to the slides of diffrent graph which will let us know that how covid 19 impacted.
+
 
 
 
